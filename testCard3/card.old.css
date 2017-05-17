@@ -1,0 +1,112 @@
+card{
+    height: 350px;
+    width: 250px;
+    display: block;
+    background-color: #959d83;
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+}
+cost{
+/*
+    position:absolute;
+    bottom: 0px;
+    width: 100%;
+    border:none;
+    display: flex;
+    justify-content:space-around;
+    flex-flow: wrap-reverse;
+*/
+}
+ card cost{
+     position: absolute;
+     width: 100%;
+     bottom: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     align-items: stretch;
+}
+card cost>*{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    min-height: 0;
+    min-width: 0;
+}
+card cost img{
+    width: 10px;
+    height: 10px;
+}
+card cost>*>*{
+    margin-right: -4px;
+}
+/*
+card cost>*>*{
+    min-height: 10;
+    min-width: 10;
+}
+card cost * {
+}
+*/
+gem {
+    width: 2.5vmin;
+    height: 2.5vmin;
+    border-radius: 100vw;
+    
+}
+card points{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2vmin;
+    height: 3.5vmin;
+    vertical-align:middle;
+    text-align: center;
+    display: inline;
+}
+card>gem{
+    position: absolute;
+    top: 0.5vmin;
+    right: 0.5vmin;
+}
+
+.blue,blue blue{
+    background-color: blue;
+}
+.red,red red{
+    background-color: red;
+/*    background-image: url("./images/ruby.png");*/
+}
+.green,green green{
+    background-color: green;
+/*    background-image: url("./images/emerald.png");*/
+}
+.brown,brown brown{
+    background-color: saddlebrown;
+}
+.yellow,yellow yellow{
+    background-color: yellow;
+}
+.white,white white{
+    background-color: white;
+}
+
+@keyframe moveCard{
+    0% {        
+        box-shadow: 2px 2px 5px #888888;
+        transform: scale(1);
+}
+    25% {
+        box-shadow: 10px 10px 5px #888888;
+        transform: scale(2);
+    }
+    75% {
+        box-shadow: 10px 10px 5px #888888;
+        transform: scale(2);
+    }
+    100% {
+        box-shadow: 0px 0px 5px #888888;
+        transform: scale(1);
+    }
+}

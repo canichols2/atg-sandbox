@@ -1,0 +1,74 @@
+
+<!-- saved from url=(0035)http://ws_atg.cornycomps.work:2644/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="./splendor.css">
+    <link rel="stylesheet" type="text/css" href="./card.css">
+    <link rel="stylesheet" type="text/css" href="./lobby.css">
+</head>
+
+<body>
+    <div id="signDiv" style="display: none;">
+        <form>
+            <label>Username:</label>
+            <input type="text" name="username">
+            <input type="submit" value="Signin"> </form>
+    </div>
+    <form id="startGameButton" style="display: none;">
+        <label>Join Game</label>
+        <input type="text" id="joinGameName" name="joinGameName">
+        <button onclick="joinGame()">Join</button>
+    </form>
+    <main>
+        <player id="player1"></player>
+        <player id="player2"><gems><div><p>0</p><p>undefined</p></div><div><p>1</p><p>undefined</p></div><div><p>2</p><p>undefined</p></div><div><p>3</p><p>undefined</p></div><div><p>4</p><p>undefined</p></div></gems><name>Nichols</name><points>0</points></player>
+        <player id="player3"></player>
+        <player id="player4"></player>
+        <tabletop>
+            <div>
+                <deck></deck>
+                <playarea>
+                    <div>
+                        <div><card id="137CardID"><points><div><div>0</div></div></points><cost><blue><div><img src="./Blue.png"></div><div><div>2</div></div></blue><brown><div><img src="./Brown.png"></div><div><div>2</div></div></brown></cost><img src="./bg_white.png"><gem><div><img src="./white.png"></div></gem></card></div>
+                        <div><card id="117CardID"><points><div><div>0</div></div></points><cost><green><div><img src="./Green.png"></div><div><div>2</div></div></green><white><div><img src="./white(1).png"></div><div><div>2</div></div></white></cost><img src="./bg_brown.png"><gem><div><img src="./Brown(1).png"></div></gem></card></div>
+                        <div><card id="104CardID"><points><div><div>0</div></div></points><cost><red><div><img src="./Red.png"></div><div><div>2</div></div></red><white><div><img src="./white(1).png"></div><div><div>2</div></div></white></cost><img src="./bg_red.png"><gem><div><img src="./Red(1).png"></div></gem></card></div>
+                        <div><card id="128CardID"><points><div><div>0</div></div></points><cost><red><div><img src="./Red.png"></div><div><div>1</div></div></red><blue><div><img src="./Blue.png"></div><div><div>1</div></div></blue><brown><div><img src="./Brown.png"></div><div><div>1</div></div></brown><white><div><img src="./white(1).png"></div><div><div>1</div></div></white></cost><img src="./bg_green.png"><gem><div><img src="./Green(1).png"></div></gem></card></div>
+                    </div>
+                    <div>
+                        <div><card id="224CardID"><points><div><div>3</div></div></points><cost><white><div><img src="./white(1).png"></div><div><div>6</div></div></white></cost><img src="./bg_white.png"><gem><div><img src="./white.png"></div></gem></card></div>
+                        <div><card id="216CardID"><points><div><div>1</div></div></points><cost><brown><div><img src="./Brown.png"></div><div><div>2</div></div></brown><green><div><img src="./Green.png"></div><div><div>3</div></div></green><white><div><img src="./white(1).png"></div><div><div>3</div></div></white></cost><img src="./bg_brown.png"><gem><div><img src="./Brown(1).png"></div></gem></card></div>
+                        <div><card id="218CardID"><points><div><div>3</div></div></points><cost><green><div><img src="./Green.png"></div><div><div>6</div></div></green></cost><img src="./bg_green.png"><gem><div><img src="./Green(1).png"></div></gem></card></div>
+                        <div><card id="226CardID"><points><div><div>2</div></div></points><cost><red><div><img src="./Red.png"></div><div><div>5</div></div></red><brown><div><img src="./Brown.png"></div><div><div>3</div></div></brown></cost><img src="./bg_white.png"><gem><div><img src="./white.png"></div></gem></card></div>
+                    </div>
+                    <div>
+                        <div><card id="316CardID"><points><div><div>5</div></div></points><cost><brown><div><img src="./Brown.png"></div><div><div>7</div></div></brown><white><div><img src="./white(1).png"></div><div><div>3</div></div></white></cost><img src="./bg_white.png"><gem><div><img src="./white.png"></div></gem></card></div>
+                        <div><card id="319CardID"><points><div><div>3</div></div></points><cost><red><div><img src="./Red.png"></div><div><div>5</div></div></red><blue><div><img src="./Blue.png"></div><div><div>3</div></div></blue><brown><div><img src="./Brown.png"></div><div><div>3</div></div></brown><green><div><img src="./Green.png"></div><div><div>3</div></div></green></cost><img src="./bg_white.png"><gem><div><img src="./white.png"></div></gem></card></div>
+                        <div><card id="314CardID"><points><div><div>4</div></div></points><cost><blue><div><img src="./Blue.png"></div><div><div>6</div></div></blue><green><div><img src="./Green.png"></div><div><div>3</div></div></green><white><div><img src="./white(1).png"></div><div><div>3</div></div></white></cost><img src="./bg_green.png"><gem><div><img src="./Green(1).png"></div></gem></card></div>
+                        <div><card id="311CardID"><points><div><div>3</div></div></points><cost><red><div><img src="./Red.png"></div><div><div>3</div></div></red><blue><div><img src="./Blue.png"></div><div><div>3</div></div></blue><green><div><img src="./Green.png"></div><div><div>5</div></div></green><white><div><img src="./white(1).png"></div><div><div>3</div></div></white></cost><img src="./bg_brown.png"><gem><div><img src="./Brown(1).png"></div></gem></card></div>
+                    </div>
+                </playarea>
+                <tokens>
+                    <div><img src="./Red(1).png">
+                        <p>7</p>
+                    </div>
+                    <div><img src="./Blue(1).png">
+                        <p>7</p>
+                    </div>
+                    <div><img src="./Brown(1).png">
+                        <p>7</p>
+                    </div>
+                    <div><img src="./Green(1).png">
+                        <p>7</p>
+                    </div>
+                    <div><img src="./white.png">
+                        <p>7</p>
+                    </div>
+                    <!--<div><img src="./images/yellow.png"><p>0</p></div>-->
+                </tokens>
+            </div>
+        </tabletop>
+    </main>
+
+<script src="./socket.io-1.4.5.js.download"></script>
+<script src="./splendor.js.download"></script>
+<!--<script src="SplendorServerCode.js"></script>-->
+<script src="./splendorSocketIO.js.download"></script></body></html>

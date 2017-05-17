@@ -1,0 +1,443 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="splendor.css">
+    <link rel="stylesheet" type="text/css" href="card.css">
+    <link rel="stylesheet" type="text/css" href="lobby.css">
+    <link rel="stylesheet" type="text/css" href="player%20-%20working.css">
+    <link rel="stylesheet" type="text/css" href="fonts.css">
+</head>
+
+<body>
+    <!--
+    <form id="signDiv">
+        <label>Username:</label>
+        <input type="text" name="username">
+        <input type="submit" value="Signin"> </form>
+    <form id="startGameButton" style="display: none">
+        <label>Join Game</label>
+        <input type="text" id="joinGameName" name="joinGameName">
+        <button onclick="joinGame()">Join</button>
+    </form>
+-->
+    <main>
+        <player class="bottom">
+            <div class="plusButton">
+                <p>Button</p>
+            </div>
+            <div class='tray'>
+                <div class='red'>
+                    <div class='cards'>
+                        <p>1</p>
+                    </div>
+                    <div class='tokens'>
+                        <p>1</p>
+                    </div>
+                </div>
+                <div class='blue'>
+                    <div class='cards'>
+                        <p>6</p>
+                    </div>
+                    <div class='tokens'>
+                        <p>1</p>
+                    </div>
+                </div>
+                <div class='brown'>
+                    <div class='cards'>
+                        <p>10</p>
+                    </div>
+                    <div class='tokens'>
+                        <p>1</p>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class='green'>
+                    <div class='cards'>
+                        <p>3</p>
+                    </div>
+                    <div class='tokens'>
+                        <p>5</p>
+                    </div>
+                </div>
+                <div class='purple'>
+                    <div class='cards'>
+                        <p>1</p>
+                    </div>
+                    <div class='tokens'>
+                        <p>1</p>
+                    </div>
+                </div>
+                <div class="points"></div>
+            </div>
+        </player>
+        <player class="left"></player>
+        <player class="right"></player>
+        <player class="top"></player>
+        <tabletop>
+            <div>
+                <deck></deck>
+                <playarea>
+                    <div>
+                        <div>
+                            <card onclick="addShit(this)">
+                                
+                            </card>
+                        </div>
+                        <div>
+                            <card id="135CardID">
+                                <points>
+                                    <div>
+                                        <div>0</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <red>
+                                        <div><img src="./images/Red.png"></div>
+                                        <div>
+                                            <div>1</div>
+                                        </div>
+                                    </red>
+                                    <blue>
+                                        <div><img src="./images/Blue.png"></div>
+                                        <div>
+                                            <div>1</div>
+                                        </div>
+                                    </blue>
+                                    <brown>
+                                        <div><img src="./images/Brown.png"></div>
+                                        <div>
+                                            <div>1</div>
+                                        </div>
+                                    </brown>
+                                    <green>
+                                        <div><img src="./images/Green.png"></div>
+                                        <div>
+                                            <div>2</div>
+                                        </div>
+                                    </green>
+                                </cost><img src="./images/bg_white.png">
+                                <gem>
+                                    <div><img src="./images/white.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                        <div>
+                            <card id="106CardID">
+                                <points>
+                                    <div>
+                                        <div>0</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <red>
+                                        <div><img src="./images/Red.png"></div>
+                                        <div>
+                                            <div>1</div>
+                                        </div>
+                                    </red>
+                                    <brown>
+                                        <div><img src="./images/Brown.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </brown>
+                                    <white>
+                                        <div><img src="./images/White.png"></div>
+                                        <div>
+                                            <div>1</div>
+                                        </div>
+                                    </white>
+                                </cost><img src="./images/bg_red.png">
+                                <gem>
+                                    <div><img src="./images/red.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                        <div>
+                            <card id="109CardID">
+                                <points>
+                                    <div>
+                                        <div>0</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <red>
+                                        <div><img src="./images/Red.png"></div>
+                                        <div>
+                                            <div>2</div>
+                                        </div>
+                                    </red>
+                                    <green>
+                                        <div><img src="./images/Green.png"></div>
+                                        <div>
+                                            <div>2</div>
+                                        </div>
+                                    </green>
+                                    <white>
+                                        <div><img src="./images/White.png"></div>
+                                        <div>
+                                            <div>1</div>
+                                        </div>
+                                    </white>
+                                </cost><img src="./images/bg_blue2.png">
+                                <gem>
+                                    <div><img src="./images/blue.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <card id="207CardID">
+                                <points>
+                                    <div>
+                                        <div>2</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <blue>
+                                        <div><img src="./images/Blue.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </blue>
+                                    <white>
+                                        <div><img src="./images/White.png"></div>
+                                        <div>
+                                            <div>5</div>
+                                        </div>
+                                    </white>
+                                </cost><img src="./images/bg_blue2.png">
+                                <gem>
+                                    <div><img src="./images/blue.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                        <div>
+                            <card id="222CardID">
+                                <points>
+                                    <div>
+                                        <div>1</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <red>
+                                        <div><img src="./images/Red.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </red>
+                                    <green>
+                                        <div><img src="./images/Green.png"></div>
+                                        <div>
+                                            <div>2</div>
+                                        </div>
+                                    </green>
+                                    <white>
+                                        <div><img src="./images/White.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </white>
+                                </cost><img src="./images/bg_green.png">
+                                <gem>
+                                    <div><img src="./images/green.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                        <div>
+                            <card id="211CardID">
+                                <points>
+                                    <div>
+                                        <div>1</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <red>
+                                        <div><img src="./images/Red.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </red>
+                                    <blue>
+                                        <div><img src="./images/Blue.png"></div>
+                                        <div>
+                                            <div>2</div>
+                                        </div>
+                                    </blue>
+                                    <green>
+                                        <div><img src="./images/Green.png"></div>
+                                        <div>
+                                            <div>2</div>
+                                        </div>
+                                    </green>
+                                </cost><img src="./images/bg_blue2.png">
+                                <gem>
+                                    <div><img src="./images/blue.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                        <div>
+                            <card id="201CardID">
+                                <points>
+                                    <div>
+                                        <div>2</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <brown>
+                                        <div><img src="./images/Brown.png"></div>
+                                        <div>
+                                            <div>5</div>
+                                        </div>
+                                    </brown>
+                                    <white>
+                                        <div><img src="./images/White.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </white>
+                                </cost><img src="./images/bg_red.png">
+                                <gem>
+                                    <div><img src="./images/red.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <card id="302CardID">
+                                <points>
+                                    <div>
+                                        <div>4</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <red>
+                                        <div><img src="./images/Red.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </red>
+                                    <blue>
+                                        <div><img src="./images/Blue.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </blue>
+                                    <green>
+                                        <div><img src="./images/Green.png"></div>
+                                        <div>
+                                            <div>6</div>
+                                        </div>
+                                    </green>
+                                </cost><img src="./images/bg_red.png">
+                                <gem>
+                                    <div><img src="./images/red.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                        <div>
+                            <card id="318CardID">
+                                <points>
+                                    <div>
+                                        <div>4</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <red>
+                                        <div><img src="./images/Red.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </red>
+                                    <brown>
+                                        <div><img src="./images/Brown.png"></div>
+                                        <div>
+                                            <div>6</div>
+                                        </div>
+                                    </brown>
+                                    <white>
+                                        <div><img src="./images/White.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </white>
+                                </cost><img src="./images/bg_white.png">
+                                <gem>
+                                    <div><img src="./images/white.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                        <div>
+                            <card id="309CardID">
+                                <points>
+                                    <div>
+                                        <div>4</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <red>
+                                        <div><img src="./images/Red.png"></div>
+                                        <div>
+                                            <div>7</div>
+                                        </div>
+                                    </red>
+                                </cost><img src="./images/bg_brown.png">
+                                <gem>
+                                    <div><img src="./images/brown.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                        <div>
+                            <card id="308CardID">
+                                <points>
+                                    <div>
+                                        <div>5</div>
+                                    </div>
+                                </points>
+                                <cost>
+                                    <red>
+                                        <div><img src="./images/Red.png"></div>
+                                        <div>
+                                            <div>7</div>
+                                        </div>
+                                    </red>
+                                    <brown>
+                                        <div><img src="./images/Brown.png"></div>
+                                        <div>
+                                            <div>3</div>
+                                        </div>
+                                    </brown>
+                                </cost><img src="./images/bg_brown.png">
+                                <gem>
+                                    <div><img src="./images/brown.png"></div>
+                                </gem>
+                            </card>
+                        </div>
+                    </div>
+                </playarea>
+                <tokens>
+                    <div><img src="./images/red.png">
+                        <p>0</p>
+                    </div>
+                    <div><img src="./images/blue.png">
+                        <p>0</p>
+                    </div>
+                    <div><img src="./images/brown.png">
+                        <p>0</p>
+                    </div>
+                    <div><img src="./images/green.png">
+                        <p>0</p>
+                    </div>
+                    <div><img src="./images/white.png">
+                        <p>0</p>
+                    </div>
+                    <!--<div><img src="./images/yellow.png"><p>0</p></div>-->
+                </tokens>
+            </div>
+        </tabletop>
+    </main>
+</body>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script src=splendor.js></script>
+<!--<script src="SplendorServerCode.js"></script>-->
+<script src="splendorSocketIO.js"></script>
