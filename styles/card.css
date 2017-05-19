@@ -1,0 +1,176 @@
+card{
+    height: 350px;
+    max-height: 350px;
+    min-height: 350px;
+    width: 250px;
+    max-width: 250px;
+    min-width: 250px;
+    display: block;
+    background-color: #959d83;
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+card>img{
+/*    width: 100%;*/
+/*    height: 100%;*/
+    clip: rect(0px,250px,350px,0px);
+}
+ card cost{
+     position: absolute;
+     width: 230px;
+     max-height: 200px;
+     bottom: 0;
+     display: flex;
+     flex-direction:column-reverse;
+     flex-wrap: wrap;
+     align-content: flex-start;
+     justify-content:space-between;
+     align-items:flex-start;
+     overflow: hidden;
+     
+/*     background-color: rgba(2, 60, 60, 0.59);*/
+     padding: 10px;
+/*     box-shadow: 0 -0px 10px black;*/
+}
+card cost>*{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    min-height: 0;
+    min-width: 0;
+    font-size: 40px;
+    color: #000000;
+    font: ;
+    border-radius: 40px;
+    background-color: rgba(230, 230, 230, 0.7);
+    margin: 5px;
+    box-shadow: 2px 1px 2px black;
+}
+card cost img{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+card cost>*>*{
+/*    margin-right: -4px;*/
+    width: 40px;
+    text-align: center;
+/*    margin: 5px -4px 0px 0px;*/
+}
+card cost>*>*:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+card points{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    font-size: 50px;
+    overflow: hidden;
+/*    border: .4px solid black;*/
+}
+card points>div{
+    vertical-align:middle;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: absolute;
+/*    border-radius: 0 0 15px  0;*/
+    background-color: rgba(230, 230, 230, 0.7);
+    box-shadow: 0px 0px 15px black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+}
+card points>div>*{
+    padding: 20px;
+}
+card points gem{}
+card>gem{
+    position: absolute;
+    top: 0vmin;
+    right: 10px;
+/*    width: 190;*/
+    height: 75px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    
+/*    display: none;*/
+    
+    
+}
+
+card>gem>div{
+/*
+    width: 40px;
+    height: 60px;
+    box-shadow: 2px 1px 2px black;
+    
+    box-shadow: -2px 2px 5px black;
+    background-color: rgb(67, 69, 68);
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 0px 0 30px 30px;
+*/
+}
+card gem img{
+/*
+    width: 40px;
+    height: 40px;
+    margin: 5px
+*/
+}
+.blue,blue blue{
+/*    background-color: blue;*/
+}
+.red,red red{
+/*    background-color: red;*/
+/*    background-image: url("./images/ruby.png");*/
+}
+.green,green green{
+/*    background-color: green;*/
+/*    background-image: url("./images/emerald.png");*/
+}
+.brown,brown brown{
+/*    background-color: saddlebrown;*/
+}
+.yellow,yellow yellow{
+/*    background-color: yellow;*/
+}
+.white,white white{
+/*    background-color: white;*/
+}
+
+@keyframe moveCard{
+    0% {        
+        box-shadow: 2px 2px 5px #888888;
+        transform: scale(1);
+}
+    25% {
+        box-shadow: 10px 10px 5px #888888;
+        transform: scale(2);
+    }
+    75% {
+        box-shadow: 10px 10px 5px #888888;
+        transform: scale(2);
+    }
+    100% {
+        box-shadow: 0px 0px 5px #888888;
+        transform: scale(1);
+    }
+}

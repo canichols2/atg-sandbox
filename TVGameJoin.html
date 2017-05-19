@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="styles/menu.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="title">SPLENDOR</div>
+        <img src="sprites/MainSplash.png" alt="Cody Nichols">
+    </div>
+    <div class="verticalLine"></div>
+    <div class="right">
+       <div></div>
+        <div></div>
+        <h2>Join Game</h2>
+        <form>
+            <input type="text" name="GameName" id="GameName" required class="textBox" autocomplete="off">
+            <label for="GameName">Game Name or Game Code</label>
+        </form>
+        <form>
+           <input type="text" name="PlayerName" id="PlayerName" required class="textBox" autocomplete="off">
+            <label for="PlayerName">PlayerName</label>
+            <div>
+               <input class="checkBox" type="checkbox" name="DeviceType" value="Gameboard" 
+                   onclick="disablePlayerName(this.checked);">
+               <label for="DeviceType">Gameboard Only.</label>
+            </div>
+        </form>
+        <div class="menuNavBtn">
+            <button>Cancel</button>
+            <button>Join Game</button>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+
+
+
+<script>
+    function disablePlayerName(val){
+        document.getElementById('PlayerName').disabled=val;
+        document.getElementById('PlayerName').value='';
+    }
+</script>

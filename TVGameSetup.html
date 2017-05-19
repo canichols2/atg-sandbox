@@ -7,22 +7,32 @@
         <img src="sprites/MainSplash.png" alt="Cody Nichols">
     </div>
     <div class="verticalLine"></div>
-    <div class="start">
+    <div class="right">
        <div></div>
-        <button onclick="startGameboard()">Create</button>
-        <button onclick="startGameboard()">Join</button>
-        <button onclick="startPlayer()">Spectate</button>
+        <div></div>
+        <h2>New Game</h2>
+        <form>
+            <input type="text" name="GameName" id="GameName" required class="textBox" autocomplete="off">
+            <label for="GameName">Game Name</label>
+        </form>
+        <form>
+           <input type="text" name="PlayerName" id="PlayerName" required class="textBox" autocomplete="off">
+            <label for="PlayerName">PlayerName</label>
+            <div>
+               <input class="checkBox" type="checkbox" name="DeviceType" value="Gameboard" >
+               <label for="DeviceType">Gameboard Only.</label>
+            </div>
+        </form>
+        <div class="menuNavBtn">
+            <button>Cancel</button>
+            <button>Create Game</button>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
         <div></div>
     </div>
 </body>
-
-
-<style>
-    
-</style>
-
-
-
 
 
 
