@@ -17,8 +17,9 @@ var GAME_DATA={
         ,token:[]
         ,player:[]
     }
-    ,cardsInPlay:[    [],[],[]    ]
-    
+    ,cardsInPlay:[    [],[],[]      ]
+    ,cardsInDeck:[    [],[],[]      ]
+    ,deck:[]
 }
 
 
@@ -55,10 +56,33 @@ function createGameboard(){
     GAME_DATA.player.push(document.getElementById("cody"))
     GAME_DATA.player.push(document.getElementById("trevor"))
     
-    GAME_DATA.cardContainer=createElement("div","cardContainer")
-    GAME_DATA.card = createCard(aCard,GAME_DATA.cardContainer);
-    body.appendChild(GAME_DATA.cardContainer)
+    
+    
+    for(d in GAME_DATA.deck){
+        var deck = GAME_DATA.deck[d]
+        for(c in deck){
+            var thisCard = deck[c];
+            GAME_DATA.cardsInDeck[d][c]=createElement("div","cardContainer")
+            var newCard = createCard(thisCard,GAME_DATA.cardsInDeck[d][c])
+            body.appendChild(GAME_DATA.cardsInDeck[d][c])
+            moveDiv(GAME_DATA.cardsInDeck[d][c],GAME_DATA.anchor.deck[d])
+        }
+    }
+//    
+//    GAME_DATA.cardContainer=createElement("div","cardContainer")
+//    GAME_DATA.card = createCard(aCard,GAME_DATA.cardContainer);
+//    body.appendChild(GAME_DATA.cardContainer)
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -69,12 +93,6 @@ function createElement(){
     }
     return newElement;
 }
-
-
-
-
-
-
 
     /*      Normal Create Card Function... I need a card object....   */
 
@@ -168,3 +186,6 @@ function img_create(src, alt, title) {
     if ( title != null ) img.title = title;
     return img;
 }
+
+
+createGameboard()

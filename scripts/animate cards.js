@@ -1,4 +1,4 @@
-function MoveDiv(element, toElement){
+function moveDiv(element, toElement){
     var newPosition = cumulativeOffset(toElement)
     element.style.top=newPosition.top.toString()
     element.style.left=newPosition.left.toString()
