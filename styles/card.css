@@ -111,50 +111,6 @@ card>gem{
     
 }
 
-card>gem>div{
-/*
-    width: 40px;
-    height: 60px;
-    box-shadow: 2px 1px 2px black;
-    
-    box-shadow: -2px 2px 5px black;
-    background-color: rgb(67, 69, 68);
-    position: absolute;
-    top: 0;
-    right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 0px 0 30px 30px;
-*/
-}
-card gem img{
-/*
-    width: 40px;
-    height: 40px;
-    margin: 5px
-*/
-}
-.blue,blue blue{
-/*    background-color: blue;*/
-}
-.red,red red{
-/*    background-color: red;*/
-/*    background-image: url("./images/ruby.png");*/
-}
-.green,green green{
-/*    background-color: green;*/
-/*    background-image: url("./images/emerald.png");*/
-}
-.brown,brown brown{
-/*    background-color: saddlebrown;*/
-}
-.yellow,yellow yellow{
-/*    background-color: yellow;*/
-}
-.white,white white{
-/*    background-color: white;*/
-}
 
 @keyframe moveCard{
     0% {        
