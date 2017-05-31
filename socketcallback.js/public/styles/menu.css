@@ -1,0 +1,226 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+        /*border: .5px solid black;*/
+    }
+    body{
+        display: flex;
+        flex-flow: row;
+        /*justify-content: space-around;*/
+        justify-content: center;
+        align-items: center;
+        background: #e3e3e3;
+        overflow: hidden;
+    }
+    body>.hero{
+        width: 65vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        justify-content:space-around;
+        align-items: center;
+    }
+    body>.hero>.title{
+        font-size: 6vw;
+    }
+    body>.hero>img{
+        width: 70vmin;
+    }
+
+    body>.right{
+        width: 25vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        justify-content:space-around;
+        align-items: center;
+        margin-right: 80px;
+        margin-left: 30px;
+        /*padding-right: 5vw;*/
+    }
+    body>.right p{
+        font-size: 5em;
+        margin: 2em
+    }
+    body>.right button{
+        border: none;
+        width: 350px;
+        height: 100px;
+        background: #38b446;
+        border-radius: .3em;
+        font-size: 3.5em;
+        box-shadow: 1px 1px 2px 1px black;
+        transform: scale(1.0);
+        transition: .1s ease-in-out;
+        /*Trying to fix the Blurry animation    */
+        backface-visibility: hidden;
+        transform: translate(0);
+    }
+    body>.right button:hover{
+        box-shadow: 1.5px 1.5px 2.5px 1.5px black;
+        transform: scale(1.01);
+    }
+    body>.right button:active{}
+    body>.right button:focus{
+        border: none;
+        background: #10a221;
+        transform: scale(1.01);
+        box-shadow: 1.0px 1.0px 2.0px 1.2px black;
+        outline:0;
+    }
+    body>.right button:active{
+        transform: scale(1);
+        background: #165a1e;
+    }
+
+.verticalLine{
+    /*position:absolute;*/
+    /*left:50%;*/
+    /*top:10%;*/
+    /*bottom:10%;*/
+    height: 80vh;
+    margin: 50px;
+    border-left:5px solid #6a6a6a;
+}
+/*  TEXT BOX  */
+.right>h2{
+    font-size: 3.5em;
+}
+.right>div{position: relative;}
+input.textBox 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+  background: none;
+}
+input.textBox:focus 		{
+  outline:none;
+}
+
+/* LABEL  */
+input.textBox ~ label{
+  color:#656565;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* LABEL active state */
+input.textBox:focus ~ label, input.textBox:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+input~div{
+    display: flex;
+    align-items: center;
+}
+input.checkBox{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+input.checkBox ~ label{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+div.right input.error{
+  background:red;
+}
+div.right p{
+  font-size: .85em;
+}
+div.right p.error{
+  font-size: .85em;
+  color: red;
+  /*background: pink;*/
+}
+
+
+.menuNavBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+/*    Probably going to have to fix
+        this part later. doesn't work
+        well on small window size*/
+div.menuNavBtn>button{
+    width: 190px;
+    width: 10vw;
+    height: 50px;
+    height: 2.5vw;
+    padding: 10px;
+    font-size: 1.3vw;
+}
+
+
+
+
+
+
+/*    Players / Lobby */
+
+
+div.right>players{
+    height: 100%;
+    padding-top: 12vh;
+    ;
+    display: flex;
+    flex-flow: column;
+/*    overflow: hidden;*/
+/*    box-shadow: inset 10px 10px 10px 10px;*/
+
+}
+div.right>players>player{
+    padding: 1vmin;
+    width: 20vw;
+    height: 12vh;
+    margin: 1vmin;
+    ;
+    display: flex;
+    flex-flow: row wrap;
+    background: #f7f7f7;
+    background:  url('../images/wood.jpg');
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 1px;
+}
+div.right>players>player>h2{
+    flex: 1 100%;
+    border-bottom: 1px solid black;
+    height: 30px;
+}
+div.right>players>player>div{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    ;
+    margin: 10px;
+    padding-right: 15px;
+    ;
+    background: #a5a5a5;
+    border-radius: 50px;
+    height: 3.5vmin;
+    width: 6vmin;
+    box-shadow: 1px 1px 3px 1px;
+}
+div.right>players>player>div>img{
+    width: 35;
+    height: 35;
+}
+player .cards:before{font-family: icomoon;content: "\e901";padding-left: 5px}
+player .tokens:before{font-family: icomoon;content: "\e907";padding-left: 5px}
+player img{width: 23px;height: 23px;padding-right: 3px}

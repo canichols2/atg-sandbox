@@ -1,0 +1,23 @@
+{
+  "name": "atg",
+  "version": "1.0.0",
+  "description": "sandbox for splendor",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canichols2/atg-sandbox.git"
+  },
+  "author": "Cody Nichols",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/canichols2/atg-sandbox/issues"
+  },
+  "homepage": "https://github.com/canichols2/atg-sandbox#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "socket.io": "^2.0.1"
+  }
+}
