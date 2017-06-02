@@ -3,6 +3,7 @@ function clearPage(){
 }
 function createMainMenu(){
   createHero()
+  GAME_DATA.elem.body.classList.add('homepage')
   createElement("div",GAME_DATA.elem.right)
   createButton("Create","newGameMenu()",GAME_DATA.elem.right)
   createButton("Join","joinGameMenu()",GAME_DATA.elem.right)
@@ -82,6 +83,7 @@ function createGameboard() {
 
 function newGameMenu(){
   GAME_DATA.elem.right.innerHTML=null
+  GAME_DATA.elem.body.classList.remove('homepage')
   createElement("div",GAME_DATA.elem.right)
   createElement("div",GAME_DATA.elem.right)
   createElement("h2",GAME_DATA.elem.right).innerHTML="New Game"

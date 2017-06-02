@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 *{
 /*    min-width: 10px;*/
 /*    min-height: 10px;*/
@@ -98,4 +99,75 @@
 
 
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@media only screen and (max-width: 1000px) {
+    .playarea{
+        flex-flow: column;
+        justify-content: flex-start !important;
+        height: 80vh;
+    }
+    .playarea>*{
+        width: 100% !important;
+    }
+    body.playing .playarea .decks{
+        flex-flow: row;
+        flex-shrink: 5;
+        flex-grow: 0
+    }
+    body.playing .playarea .inPlay{
+/*        flex-flow: row;*/
+        flex-shrink: 1;
+    }
+    body.playing .playarea .tokens{
+        flex-flow: row;
+        flex-shrink: 5;
+        flex-grow: 0;
+    }
+    .playing>div.right{
+        position: relative;
+        width: 100%;
+    }
+    .playing players{
+        position: absolute;
+        width: 100%;
+    }
+    body.playing>div.right> players>*{
+        display: none;
+        position: absolute;
+        top: 0;
+    }
+    body.playing>div.right> players>.localPlayer{
+        display: flex;
+        position: absolute;
+        top: 0px;
+        z-index: 10;
+        background: none;
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 20vh;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items:stretch;
+    }
+    body.playing>div.right> players>.localPlayer>div{
+        display: flex;
+        flex-flow: row wrap;
+        background: none;
+        box-shadow: none;
+        width: auto;
+/*        height: 10%;*/
+        width: 20px;
+    }
+    body.playing>div.right> players>.localPlayer>div>img{
+        flex: 1 100%;
+        
+    }
+    body.playing>div.right> players>.localPlayer>div>div{
+        flex: 1 10%;
+    }
+    body.playing>div.right> players>.localPlayer>h2{
+        display: none;
+    }
+}

@@ -81,16 +81,14 @@ function lobbyLeave(socket){
   }
 }
 function lobbyJoin(socket,lobby){
-  //Join Lobby if exists, create if not, then join.
-  if(typeof(GAME_DATA[lobby]!=undefined)){
     //Join Lobby
-    GAME_DATA[lobby].sockets.push(socket);
-  }else{
-    //create lobby
-    GAME_DATA[lobby]={};GAME_DATA[lobby].sockets=[];GAME_DATA[lobby].game=null;
-    //joinLobby
-    GAME_DATA[lobby].sockets.push(socket);
-  }
+    if(typeof(GAME_DATA[lobby]) != 'undefined'){
+      GAME_DATA[lobby].sockets.push(socket);
+
+    }
+
+
+
 }
 function lobbyAddPlayer(lobby,playerName,socket){
 

@@ -1,154 +1,154 @@
-
-    *{
-        margin: 0;
-        padding: 0;
-        /*border: .5px solid black;*/
-    }
-    body{
-        display: flex;
-        flex-flow: row;
-        /*justify-content: space-around;*/
-        justify-content: center;
-        align-items: center;
-        background: #e3e3e3;
-        overflow: hidden;
-    }
-    body>.hero{
-        width: 65vw;
-        height: 100vh;
-        display: flex;
-        flex-flow: column;
-        justify-content:space-around;
-        align-items: center;
-    }
-    body>.hero>.title{
-        font-size: 6vw;
-    }
-    body>.hero>img{
-        width: 70vmin;
-    }
-
-    body>.right{
-        width: 25vw;
-        height: 100vh;
-        display: flex;
-        flex-flow: column;
-        justify-content:space-around;
-        align-items: center;
-        margin-right: 80px;
-        margin-left: 30px;
-        /*padding-right: 5vw;*/
-    }
-    body>.right p{
-        font-size: 5em;
-        margin: 2em
-    }
-    body>.right button{
-        border: none;
-        width: 350px;
-        height: 100px;
-        background: #38b446;
-        border-radius: .3em;
-        font-size: 3.5em;
-        box-shadow: 1px 1px 2px 1px black;
-        transform: scale(1.0);
-        transition: .1s ease-in-out;
-        /*Trying to fix the Blurry animation    */
-        backface-visibility: hidden;
-        transform: translate(0);
-    }
-    body>.right button:hover{
-        box-shadow: 1.5px 1.5px 2.5px 1.5px black;
-        transform: scale(1.01);
-    }
-    body>.right button:active{}
-    body>.right button:focus{
-        border: none;
-        background: #10a221;
-        transform: scale(1.01);
-        box-shadow: 1.0px 1.0px 2.0px 1.2px black;
-        outline:0;
-    }
-    body>.right button:active{
-        transform: scale(1);
-        background: #165a1e;
-    }
-
-.verticalLine{
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+    margin: 0;
+    padding: 0;
+    /*border: .5px solid black;*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    transition: all 0.1s ease;
+         
+}
+body {
+    display: flex;
+    flex-flow: row;
+    /*justify-content: space-around;*/
+    justify-content: center;
+    align-items: center;
+    background: #e3e3e3;
+    overflow: hidden;
+}
+body>.hero {
+    width: 65vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+body>.hero>.title {
+    font-size: 6vw;
+}
+body>.hero>img {
+    width: 70vmin;
+}
+body>.right {
+    width: 25vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 80px;
+    margin-left: 30px;
+    /*padding-right: 5vw;*/
+}
+body>.right p {
+    font-size: 5em;
+    margin: 2em
+}
+body>.right button {
+    border: none;
+    width: 350px;
+    height: 100px;
+    background: #38b446;
+    border-radius: .3em;
+    font-size: 3.5em;
+    box-shadow: 1px 1px 2px 1px black;
+    transform: scale(1.0);
+    transition: .1s ease-in-out;
+    /*Trying to fix the Blurry animation    */
+    backface-visibility: hidden;
+    transform: translate(0);
+}
+body>.right button:hover {
+    box-shadow: 1.5px 1.5px 2.5px 1.5px black;
+    transform: scale(1.01);
+}
+body>.right button:active {}
+body>.right button:focus {
+    border: none;
+    background: #10a221;
+    transform: scale(1.01);
+    box-shadow: 1.0px 1.0px 2.0px 1.2px black;
+    outline: 0;
+}
+body>.right button:active {
+    transform: scale(1);
+    background: #165a1e;
+}
+.verticalLine {
     /*position:absolute;*/
     /*left:50%;*/
     /*top:10%;*/
     /*bottom:10%;*/
     height: 80vh;
     margin: 50px;
-    border-left:5px solid #6a6a6a;
+    border-left: 5px solid #6a6a6a;
 }
 /*  TEXT BOX  */
-.right>h2{
+.right>h2 {
     font-size: 3.5em;
 }
-.right>div{position: relative;}
-input.textBox 				{
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #757575;
-  background: none;
+.right>div {
+    position: relative;
 }
-input.textBox:focus 		{
-  outline:none;
+input.textBox {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #757575;
+    background: none;
 }
-
+input.textBox:focus {
+    outline: none;
+}
 /* LABEL  */
-input.textBox ~ label{
-  color:#656565;
-  font-size:18px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
+input.textBox~label {
+    color: #656565;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
 }
-
 /* LABEL active state */
-input.textBox:focus ~ label, input.textBox:valid ~ label 		{
-  top:-20px;
-  font-size:14px;
-  color:#5264AE;
+input.textBox:focus~label,
+input.textBox:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
 }
-
-input~div{
+input~div {
     display: flex;
     align-items: center;
 }
-input.checkBox{
+input.checkBox {
     width: 50px;
     height: 50px;
     margin: 15px;
 }
-input.checkBox ~ label{
+input.checkBox~label {
     font-size: 1.5em;
     font-weight: 600;
 }
-div.right input.error{
-  background:red;
+div.right input.error {
+    background: red;
 }
-div.right p{
-  font-size: .85em;
+div.right p {
+    font-size: .85em;
 }
-div.right p.error{
-  font-size: .85em;
-  color: red;
-  /*background: pink;*/
+div.right p.error {
+    font-size: .85em;
+    color: red;
+    /*background: pink;*/
 }
-
-
-.menuNavBtn{
+.menuNavBtn {
     width: 100%;
     display: flex;
     align-items: center;
@@ -157,7 +157,7 @@ div.right p.error{
 /*    Probably going to have to fix
         this part later. doesn't work
         well on small window size*/
-div.menuNavBtn>button{
+div.menuNavBtn>button {
     width: 190px;
     width: 10vw;
     height: 50px;
@@ -165,26 +165,17 @@ div.menuNavBtn>button{
     padding: 10px;
     font-size: 1.3vw;
 }
-
-
-
-
-
-
 /*    Players / Lobby */
-
-
-div.right>players{
+div.right>players {
     height: 100%;
     padding-top: 12vh;
     ;
     display: flex;
     flex-flow: column;
-/*    overflow: hidden;*/
-/*    box-shadow: inset 10px 10px 10px 10px;*/
-
+    /*    overflow: hidden;*/
+    /*    box-shadow: inset 10px 10px 10px 10px;*/
 }
-div.right>players>player{
+div.right>players>player {
     padding: 1vmin;
     width: 20vw;
     height: 12vh;
@@ -193,16 +184,16 @@ div.right>players>player{
     display: flex;
     flex-flow: row wrap;
     background: #f7f7f7;
-    background:  url('../images/wood.jpg');
+    background: url('../images/wood.jpg');
     border-radius: 3px;
     box-shadow: 1px 1px 5px 1px;
 }
-div.right>players>player>h2{
+div.right>players>player>h2 {
     flex: 1 100%;
     border-bottom: 1px solid black;
     height: 30px;
 }
-div.right>players>player>div{
+div.right>players>player>div {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -217,10 +208,170 @@ div.right>players>player>div{
     width: 6vmin;
     box-shadow: 1px 1px 3px 1px;
 }
-div.right>players>player>div>img{
+div.right>players>player>div>img {
     width: 35;
     height: 35;
 }
-player .cards:before{font-family: icomoon;content: "\e901";padding-left: 5px}
-player .tokens:before{font-family: icomoon;content: "\e907";padding-left: 5px}
-player img{width: 23px;height: 23px;padding-right: 3px}
+player .cards:before {
+    font-family: icomoon;
+    content: "\e901";
+    padding-left: 5px
+}
+player .tokens:before {
+    font-family: icomoon;
+    content: "\e907";
+    padding-left: 5px
+}
+player img {
+    width: 23px;
+    height: 23px;
+    padding-right: 3px
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    body {
+        flex-flow: column;
+        overflow: scroll;
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    body>div.hero {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-flow: row-reverse;
+        justify-content: flex-end;
+        background: #555555;
+        color: aliceblue;
+        box-shadow: 2px 2px 5px 0px #888888;
+    }
+    body>div.hero>img{
+        width: 50px;
+        
+/*    transition: all 0.1s ease;*/
+    }
+    body>div.right {
+        flex-flow: column nowrap;
+        justify-content:space-between;
+        width: 90%;
+        height: 100%;
+        padding: 0vw;
+        margin: auto;
+/*        background: black;*/
+        /*background: black;*/
+    }
+    .menuNavBtn{
+        flex-flow: row;
+        justify-content:space-around;
+    }
+    body>div.right button {
+        width: 25vw;
+        height: 10vw;
+        font-size: 1em;
+    }
+    body>div.verticalLine {
+        display: none
+    }
+    /* HomePage Separate CSS */
+    body.homepage>div.hero{
+        flex-flow: column nowrap;
+        align-items: space-around;
+        background: none;
+        box-shadow: none;
+        flex-shrink: 2;
+    }
+    body.homepage>div.hero>div.title{
+        width: 100%;
+        background: #555555;
+        box-shadow: 2px 2px 5px 0px #888888;
+    }
+    body.homepage>div.hero>img{
+        align-self: center;
+        width: 70vh;
+    }
+    body.homepage>div.right{
+        flex-flow: row;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        padding: 20;
+        height: 50px;
+        flex-grow: 2;
+        align-items: flex-end;
+    }
+    /* Players mobile css */
+    body>div.right>players{
+        flex-flow: column nowrap;
+        align-content: stretch;
+        justify-content:flex-start;
+        padding: 0px;
+        width: 100%;
+    }
+    body>div.right>players>player{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
