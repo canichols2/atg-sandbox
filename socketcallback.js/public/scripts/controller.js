@@ -2,6 +2,9 @@ var socket = io();
 socket.on('message', function(data){
   // document.getElementById("message").innerHTML = data;
 });
+socket.on('game',function(data){
+
+})
 
 function joinLobby(){
   socket.emit('eventToEmit', {name:"cody"}, function(error, message){
@@ -44,4 +47,12 @@ function cont_createGame(){
       }
     })
   }
+}
+
+function cont_startGame(){
+  socket.emit('startGame',function(started,obj){
+    console.log("Started: "+started);
+    console.log("msg:");
+    console.log(obj);
+  })
 }
